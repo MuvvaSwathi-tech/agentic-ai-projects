@@ -7,9 +7,11 @@ from prompts import SYSTEM_PROMPT
 
 load_dotenv()
 
+# Using gemini-2.5-flash - latest and most capable model available
 llm = ChatGoogleGenerativeAI(
-    model="gemini-1.5-flash",
-    google_api_key=os.getenv("GEMINI_API_KEY")
+    model="gemini-2.5-flash",
+    google_api_key=os.getenv("GEMINI_API_KEY"),
+    temperature=0.3
 )
 
 class FactCheckerAgent:
@@ -26,6 +28,12 @@ class FactCheckerAgent:
         {user_input}
         """
 
-        response = llm.invoke(final_prompt)
-
-        return response.content
+        try:
+            response = llm.invoke(final_prompt)
+            return response.content
+        except Exception as e:
+            error_msg = str(e)
+            if "NOT_FOUND" in error_msg or "not found" in error_msg:
+                print("\nNote: The specified model is not available. Using gemini-pro instead.")
+                print("If you have access to gemini-1.5-pro, update the model parameter in agent.py\n")
+            raise
