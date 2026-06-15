@@ -1,0 +1,32 @@
+[
+  {
+    "role": "user",
+    "content": "hey",
+    "timestamp": "2026-05-31T20:52:48.710872"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm here to help you plan and book your travel. What kind of trip are you thinking about today? Flights, trains, buses, or something else?",
+    "timestamp": "2026-05-31T20:52:51.152445"
+  },
+  {
+    "role": "user",
+    "content": "hii",
+    "timestamp": "2026-05-31T20:58:07.879547"
+  },
+  {
+    "role": "assistant",
+    "content": "Hi there! Ready to plan your next adventure? Just let me know where and when you'd like to travel, and I can help you find the best options for flights, trains, or buses.",
+    "timestamp": "2026-05-31T20:58:09.865970"
+  },
+  {
+    "role": "user",
+    "content": "to hyderbada",
+    "timestamp": "2026-05-31T20:58:18.699237"
+  },
+  {
+    "role": "assistant",
+    "content": "Great! Hyderabad is a wonderful city.\n\nTo help you find the best options, could you please tell me:\n\n1.  **Where will you be traveling from?** (Your departure city)\n2.  **What are your preferred travel dates?** (Departure and return, if applicable)\n\nOnce I have that, I can look into flights, trains, or buses for you.",
+    "timestamp": "2026-05-31T20:58:20.888495"
+  }
+]
